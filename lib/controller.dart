@@ -2,14 +2,9 @@ import 'package:mvc_pattern/mvc_pattern.dart';
 import 'package:mvc_tutorial/model.dart';
 
 class Controller extends ControllerMVC {
-  factory Controller() {
-    if (_this == null) _this = Controller._();
-    return _this;
-  }
-
-  static late Controller _this;
-
+  factory Controller() => _this ??= Controller._();
   Controller._();
+  static Controller? _this;
 
   int get counter => Model.counter;
 

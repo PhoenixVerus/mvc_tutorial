@@ -1,13 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:mvc_tutorial/mvc_view.dart';
-import 'controller.dart';
+import 'mvc_view.dart';
 
 void main() {
   runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({Key ?key}) : super(key: key);
+  const MyApp({super.key});
 
   //root of the application
   @override
@@ -17,7 +16,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: new MyHomePage(title: 'My Thing',),
+      home: const MyHomePage(title: 'My Thing',),
     );
   }
 }
